@@ -1,5 +1,5 @@
 (function() {
-    angular.module('partials.about', [])
+    angular.module('partials.about', ['components.version'])
         .config(Route)
         .controller('AboutCtrl', AboutCtrl);
 
@@ -14,7 +14,9 @@
         });
     }
 
-    function AboutCtrl() {
-
+    /* @ngInject */
+    function AboutCtrl(version) {
+        vm = this;
+        vm.version = version.version;
     }
 })();
