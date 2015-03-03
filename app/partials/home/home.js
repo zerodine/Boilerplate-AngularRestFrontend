@@ -1,5 +1,5 @@
 (function() {
-    angular.module('partials.home', [])
+    angular.module('partials.home', ['ui.router'])
         .config(Route)
         .controller('HomeCtrl', HomeCtrl);
 

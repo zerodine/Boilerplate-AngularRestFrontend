@@ -4,7 +4,10 @@
   "description": "A boilerplate to build a angular RESTful frontend",
   "main": "app/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "bower install",
+    "prestart": "npm install",
+    "start": "http-server -a localhost -p 8181",
+    "test": "karma start"
   },
   "repository": {
     "type": "git",
@@ -45,10 +48,5 @@
     "karma-phantomjs-launcher": "^0.1.4",
     "karma-safari-launcher": "^0.1.1",
     "phantomjs": "^1.9.13"
-  },
-  "scripts": {
-    "postinstall": "bower install",
-    "prestart": "npm install",
-    "start": "http-server -a localhost -p 8181"
   }
 }
