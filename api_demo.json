@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "name": "Homer Simpsons",
+      "age": 45
+    },
+    {
+      "name": "Lisa Simpsons",
+      "age": 11
+    }
+  ]
+}

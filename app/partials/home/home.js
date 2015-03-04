@@ -1,5 +1,5 @@
 (function() {
-    angular.module('partials.home', ['ui.router'])
+    angular.module('partials.home', ['ui.router', 'restclient'])
         .config(Route)
         .controller('HomeCtrl', HomeCtrl);
 
@@ -12,11 +12,8 @@
             controller: 'HomeCtrl',
             controllerAs: 'vm',
             resolve: {
-                users: function () {
-                    return [
-                        {name: 'Jack Bauer', age: 53},
-                        {name: 'Sandra Bullock', age: 50}
-                    ]
+                users: function (api) {
+                    return api.users.get();
                 }
             }
         });
@@ -26,7 +23,6 @@
     /* @ngInject */
     function HomeCtrl(users) {
         var vm = this;
-
         vm.users = users;
     }
 })();

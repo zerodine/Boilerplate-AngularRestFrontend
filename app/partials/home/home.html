@@ -1,8 +1,9 @@
 <div class="container">
     <h1>Home</h1>
+    <p>Data from demo rest api:</p>
     <ul>
         <li ng-repeat="user in vm.users">
-            Name: {{user.name}}, Age: {{user.age}}
+            {{user.name}} ({{user.age}} yo)
         </li>
     </ul>
 </div>
